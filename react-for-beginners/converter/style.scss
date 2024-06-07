@@ -31,6 +31,10 @@ h1 {
   background-color: rgba($color: #fff, $alpha: 0.2);
   border: none;
   color: #212510;
+  transition: all 0.2s;
+  &:hover {
+    scale: 0.98;
+  }
 }
 #option {
   background-color: #1a3315;
@@ -65,6 +69,10 @@ h1 {
     width: 40%;
     padding: 10px 0;
     font-family: Georgia, "Times New Roman", Times, serif;
+    transition: all 0.2s;
+    &:hover {
+      scale: 0.95;
+    }
   }
 }
 
@@ -88,7 +96,6 @@ h1 {
     color: inherit;
   }
   &:disabled {
-    background-color: rgba($color: #212510, $alpha: 0.5);
-    color: rgba($color: #fff, $alpha: 0.7);
+    background-color: rgba($color: #ddd, $alpha: 0.1);
   }
 }

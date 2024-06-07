@@ -34,6 +34,10 @@ h1 {
   background-color: rgba(255, 255, 255, 0.2);
   border: none;
   color: #212510;
+  transition: all 0.2s;
+}
+#select:hover {
+  scale: 0.98;
 }
 
 #option {
@@ -71,6 +75,10 @@ h1 {
   width: 40%;
   padding: 10px 0;
   font-family: Georgia, "Times New Roman", Times, serif;
+  transition: all 0.2s;
+}
+.content__btn:hover {
+  scale: 0.95;
 }
 
 .label,
@@ -95,6 +103,5 @@ h1 {
   color: inherit;
 }
 .input:disabled {
-  background-color: rgba(33, 37, 16, 0.5);
-  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(221, 221, 221, 0.1);
 }/*# sourceMappingURL=style.css.map */
