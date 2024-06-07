@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
   <body>
     <div id="root"></div>
   </body>
@@ -21,34 +24,43 @@
         setInverted((current) => !current);
       };
       return (
-        <div>
-          <div>
-            <label for="minutes">Minutes</label>
+        <div class="content">
+          <div class="content__type">
+            <label for="minutes" class="label">
+              Minutes
+            </label>
             <input
               value={inverted ? amount * 60 : amount}
               id="minutes"
-              placeholder="Minutes"
+              class="input"
+              placeholder="0"
               type="number"
               onChange={onChange}
               disabled={inverted}
             />
           </div>
-          <div>
-            <label for="hours">Hours</label>
+          <div class="content__type">
+            <label for="hours" class="label">
+              Hours
+            </label>
             <input
               value={inverted ? amount : Math.round(amount / 60)}
               id="hours"
-              placeholder="Hours"
+              class="input"
+              placeholder="0.0"
               type="number"
               onChange={onChange}
               disabled={!inverted}
             />
           </div>
-
-          <button onClick={reset}>Reset</button>
-          <button onClick={onInvert}>
-            {inverted ? "Turn Back" : "Invert"}
-          </button>
+          <div class="content__btn-wrap">
+            <button class="content__btn" onClick={reset}>
+              Reset
+            </button>
+            <button class="content__btn" onClick={onInvert}>
+              {inverted ? "Turn Back" : "Invert"}
+            </button>
+          </div>
         </div>
       );
     }
@@ -65,34 +77,43 @@
         setInverted((current) => !current);
       };
       return (
-        <div>
-          <div>
-            <label for="centimeters">Centimeters</label>
+        <div class="content">
+          <div class="content__type">
+            <label for="centimeters" class="label">
+              Centimeters
+            </label>
             <input
               value={inverted ? (length / 0.393701).toFixed(2) : length}
               id="centimeters"
-              placeholder="Centimeters"
+              class="input"
+              placeholder="0"
               type="number"
               onChange={onChange}
               disabled={inverted}
             />
           </div>
-          <div>
-            <label for="inches">Inches</label>
+          <div class="content__type">
+            <label for="inches" class="label">
+              Inches
+            </label>
             <input
               value={inverted ? length : (length * 0.393701).toFixed(2)}
               id="inches"
-              placeholder="Inches"
+              class="input"
+              placeholder="0.00"
               type="number"
               onChange={onChange}
               disabled={!inverted}
             />
           </div>
-
-          <button onClick={reset}>Reset</button>
-          <button onClick={onInvert}>
-            {inverted ? "Turn Back" : "Invert"}
-          </button>
+          <div class="content__btn-wrap">
+            <button class="content__btn" onClick={reset}>
+              Reset
+            </button>
+            <button class="content__btn" onClick={onInvert}>
+              {inverted ? "Turn Back" : "Invert"}
+            </button>
+          </div>
         </div>
       );
     }
@@ -104,12 +125,18 @@
         console.log("Render w/", index);
       };
       return (
-        <div>
+        <div class="content">
           <h1>Super Converter</h1>
-          <select value={index} onChange={onSelect} name="" id="">
-            <option value="xx">Select your units</option>
-            <option value="0">Minutes &amp; Hours</option>
-            <option value="1">Cm &amp; Inch</option>
+          <select value={index} onChange={onSelect} name="" id="select">
+            <option value="xx" id="option">
+              Select your units
+            </option>
+            <option value="0" id="option">
+              Minutes &amp; Hours
+            </option>
+            <option value="1" id="option">
+              Cm &amp; Inch
+            </option>
           </select>
           <hr />
           {index === "xx" ? "Please select your units" : null}
