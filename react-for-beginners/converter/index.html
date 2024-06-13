@@ -44,10 +44,10 @@
               Hours
             </label>
             <input
-              value={inverted ? amount : Math.round(amount / 60)}
+              value={inverted ? amount : amount / 60}
               id="hours"
               class="input"
-              placeholder="0.0"
+              placeholder="0"
               type="number"
               onChange={onChange}
               disabled={!inverted}
