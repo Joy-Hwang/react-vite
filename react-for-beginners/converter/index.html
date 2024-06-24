@@ -120,7 +120,6 @@
     function App() {
       const [index, setIndex] = React.useState("xx");
       const onSelect = (event) => {
-        // console.log(event);
         setIndex(event.target.value);
         console.log("Render w/", index);
       };
